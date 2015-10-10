@@ -1,0 +1,24 @@
+<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>Login</h3>
+            <form ng-submit="vm.login()">
+                <div class="form-group" ng-class="{ 'has-error': vm.name.$touched && vm.name.$invalid }">
+                    <input type="text" class="form-control" placeholder="Username" ng-model="vm.name">
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': vm.password.$touched && vm.password.$invalid }">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="vm.password">
+                </div>
+
+                <div ng-if="vm.loginError" class="alert alert-danger">
+                    <i class="fa fa-times"></i> Uh-oh! Wrong login information.
+                </div>
+
+                <button type="submit" class="btn btn-primary" ng-disabled="vm.loading">
+                    Submit
+                    <i ng-if="vm.loading" class="fa fa-spinner fa-pulse"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

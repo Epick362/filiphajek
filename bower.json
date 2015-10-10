@@ -1,0 +1,31 @@
+{
+  "name": "boostrap-angular-laravel",
+  "version": "0.0.0",
+  "authors": [
+    "Filip Hajek"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-animate": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "angular-toastr": "~1.4.1",
+    "angular-ui-router": "~0.2.15",
+    "animate.css": "~3.4.0",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "lodash": "~3.10.1",
+    "ng-messages": "*",
+    "satellizer": "~0.11.2"
+  },
+  "resolutions": {
+    "angular": "~1.4.5"
+  }
+}
