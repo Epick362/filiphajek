@@ -70,4 +70,4 @@ gulp.task('watch', function() {
     gulp.watch(viewsPath, ['appViews']);
 });
 
-gulp.task('default', ['vendorCSS', 'vendorJS', 'fonts', 'less', 'watch']);
+gulp.task('default', ['appJS', 'appViews', 'vendorCSS', 'vendorJS', 'fonts', 'less', 'watch']);
