@@ -24,7 +24,6 @@ gulp.task('less', function () {
 gulp.task('vendorCSS', function () {
     gulp.src([ 'public/vendor/animate.css/animate.min.css',
             'public/vendor/font-awesome/css/font-awesome.min.css',
-            'public/vendor/ui-select/dist/select.min.css',
             'public/vendor/angular-toastr/dist/angular-toastr.min.css'],
             {base: 'public/vendor/'})
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
@@ -37,7 +36,6 @@ gulp.task('vendorJS', function () {
             'public/vendor/angular-bootstrap/ui-bootstrap.min.js',
             'public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
             'public/vendor/angular-ui-router/release/angular-ui-router.min.js',
-            'public/vendor/ngstorage/ngStorage.min.js',
             'public/vendor/lodash/lodash.min.js',
             'public/vendor/ngAnimateCss/angular-animate-css.min.js',
             'public/vendor/satellizer/satellizer.min.js',
