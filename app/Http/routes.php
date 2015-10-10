@@ -14,7 +14,7 @@
 Route::group(['prefix' => 'api'], function () {
     Route::group(['middleware' => 'jwt.auth'], function() {
         Route::get('ping', function() {
-            return 'authenticated'
+            return 'authenticated';
         });
     });
 
