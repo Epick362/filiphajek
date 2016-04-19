@@ -25,7 +25,7 @@
         <base href="/" />
     </head>
     <body ng-app="app" ng-cloak>
-        <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
             <button class="navbar-toggler hidden-sm-up" type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
                 &#9776;
             </button>
@@ -62,11 +62,18 @@
                 </ul>
             </div>
         </nav>
+
         <div class="container content">
             <ui-view></ui-view>
         </div>
 
         <script type="text/javascript" src="{{ url('build/vendor.min.js') }}"></script>
         <script type="text/javascript" src="{{ url('build/app.min.js') }}"></script>
+
+        @if (app('env') == 'local')
+<script id="__bs_script__">//<![CDATA[
+document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.12.3.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+        @endif
     </body>
 </html>

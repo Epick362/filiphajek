@@ -4,8 +4,9 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var browserSync = require('browser-sync').create();
 
-var lessPath = './resources/assets/less/**/*.less';
+var scssPath = './resources/assets/scss/**/*.scss';
 var jsPath = 'resources/assets/js/**/*.js';
 var viewsPath = 'resources/assets/js/views/*.html';
 var output = './public/build';
@@ -18,7 +19,8 @@ gulp.task('sass', function () {
         }).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(minifyCss())
-        .pipe(gulp.dest(output));
+        .pipe(gulp.dest(output))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('vendorCSS', function () {
@@ -65,9 +67,14 @@ gulp.task('appViews', function () {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(lessPath, ['sass']);
-    gulp.watch(jsPath, ['appJS']);
-    gulp.watch(viewsPath, ['appViews']);
+    browserSync.init({
+        open: false,
+        notify: false
+    });
+
+    gulp.watch(scssPath, ['sass']).on('change', browserSync.reload);
+    gulp.watch(jsPath, ['appJS']).on('change', browserSync.reload);
+    gulp.watch(viewsPath, ['appViews']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['appJS', 'appViews', 'vendorCSS', 'vendorJS', 'fonts', 'sass', 'watch']);
