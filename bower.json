@@ -19,7 +19,7 @@
     "angular-toastr": "~1.4.1",
     "angular-ui-router": "~0.2.15",
     "animate.css": "~3.4.0",
-    "bootstrap": "~3.3.5",
+    "bootstrap": "~v4.0.0-alpha.2",
     "font-awesome": "~4.4.0",
     "lodash": "~3.10.1",
     "ng-messages": "*",

@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
@@ -11,11 +11,11 @@ var viewsPath = 'resources/assets/js/views/*.html';
 var output = './public/build';
 var bowerDir = './public/vendor/';
 
-gulp.task('less', function () {
-    gulp.src('./resources/assets/less/app.less')
-        .pipe(less({
-            paths: [ bowerDir + "bootstrap/less", bowerDir + "font-awesome/less" ]
-        }))
+gulp.task('sass', function () {
+    gulp.src('./resources/assets/scss/app.scss')
+        .pipe(sass({
+            includePaths: [ bowerDir + "bootstrap/scss", bowerDir + "font-awesome/scss" ]
+        }).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(minifyCss())
         .pipe(gulp.dest(output));
@@ -65,9 +65,9 @@ gulp.task('appViews', function () {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(lessPath, ['less']);
+    gulp.watch(lessPath, ['sass']);
     gulp.watch(jsPath, ['appJS']);
     gulp.watch(viewsPath, ['appViews']);
 });
 
-gulp.task('default', ['appJS', 'appViews', 'vendorCSS', 'vendorJS', 'fonts', 'less', 'watch']);
+gulp.task('default', ['appJS', 'appViews', 'vendorCSS', 'vendorJS', 'fonts', 'sass', 'watch']);

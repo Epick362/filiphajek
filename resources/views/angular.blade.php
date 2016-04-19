@@ -25,51 +25,42 @@
         <base href="/" />
     </head>
     <body ng-app="app" ng-cloak>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">
-                        Bootstrap
-                    </a>
-                </div>
+        <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+            <button class="navbar-toggler hidden-sm-up" type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                &#9776;
+            </button>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="navbar-collapse collapse" collapse="navCollapsed">
-                    <ul class="nav navbar-nav">
-                        <li><a href="item">item</a></li>
-                    </ul>
+            <div class="collapse navbar-toggleable-xs" collapse="navCollapsed">
+                <a class="navbar-brand" href="/">
+                    Bootstrap
+                </a>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li ng-if="authenticated">
-                            <a ui-sref="index">
-                                <i class="fa fa-user"></i> @{{currentUser.name}}
-                            </a>
-                        </li>
-                        <li ng-if="authenticated">
-                            <logout></logout>
-                        </li>
-                        <li ng-if="!authenticated">
-                            <a ui-sref="login">
-                                Log In
-                            </a>
-                        </li>
-                        <li ng-if="!authenticated">
-                            <a ui-sref="register">
-                                Sign Up
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="item">item</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item" ng-if="authenticated">
+                        <a class="nav-link" ui-sref="index">
+                            <i class="fa fa-user"></i> @{{currentUser.name}}
+                        </a>
+                    </li>
+                    <li class="nav-item" ng-if="authenticated">
+                        <logout></logout>
+                    </li>
+                    <li class="nav-item" ng-if="!authenticated">
+                        <a class="nav-link" ui-sref="login">
+                            Log In
+                        </a>
+                    </li>
+                    <li class="nav-item" ng-if="!authenticated">
+                        <a class="nav-link" ui-sref="register">
+                            Sign Up
+                        </a>
+                    </li>
+                </ul>
             </div>
-        <!-- /.container-fluid -->
         </nav>
         <div class="container content">
             <ui-view></ui-view>
