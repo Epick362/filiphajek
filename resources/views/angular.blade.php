@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Bootstrap</title>
+        <title>Filip Hajek - Freelance Web developer/designer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -25,7 +25,7 @@
         <base href="/" />
     </head>
     <body ng-app="app" ng-cloak>
-        <nav class="navbar navbar-dark navbar-fixed-top" ng-class="(!$state.is('index') || forceOpaque) ? 'bg-inverse' : 'bg-transparent'">
+        <nav class="navbar navbar-dark navbar-fixed-top" ng-class="(!$state.is('index') || forceOpaque || !navCollapsed) ? 'bg-inverse' : 'bg-transparent'">
             <div class="container">
                 <button class="navbar-toggler hidden-sm-up" type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
                     &#9776;
@@ -34,15 +34,14 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-toggleable-xs" collapse="navCollapsed">
                     <a class="navbar-brand" href="/">
-                        Bootstrap
-                        @{{$forceOpaque}} lel
+                        Filip Hajek
                     </a>
 
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="item">item</a></li>
-                    </ul>
-
                     <ul class="nav navbar-nav pull-xs-right">
+                        <li class="nav-item"><a class="nav-link" href="">Projekty</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">O mne</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Kontakt</a></li>
+
                         <li class="nav-item" ng-if="authenticated">
                             <a class="nav-link" ui-sref="index">
                                 <i class="fa fa-user"></i> @{{currentUser.name}}
@@ -50,16 +49,6 @@
                         </li>
                         <li class="nav-item" ng-if="authenticated">
                             <logout></logout>
-                        </li>
-                        <li class="nav-item" ng-if="!authenticated">
-                            <a class="nav-link" ui-sref="login">
-                                Log In
-                            </a>
-                        </li>
-                        <li class="nav-item" ng-if="!authenticated">
-                            <a class="nav-link" ui-sref="register">
-                                Sign Up
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -71,7 +60,14 @@
         <div class="footer-margin"></div>
         <footer>
             <div class="container">
-                Ay lmaoo
+                &copy; {{ date('Y') }} FilipHajek.com
+
+                <div class="pull-right">
+                    <ul class="list-unstyled list-inline list-social">
+                        <li class="list-inline-item"><a href="https://github.com/Epick362"><i class="fa fa-github"></i> Github</a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/filiphajekwebdev/"><i class="fa fa-facebook"></i> Facebook</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
 

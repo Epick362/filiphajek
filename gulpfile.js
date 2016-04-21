@@ -4,11 +4,12 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var flatten = require('gulp-flatten');
 var browserSync = require('browser-sync').create();
 
 var scssPath = './resources/assets/scss/**/*.scss';
 var jsPath = 'resources/assets/js/**/*.js';
-var viewsPath = 'resources/assets/js/views/*.html';
+var viewsPath = 'resources/assets/js/views/**/*.html';
 var output = './public/build';
 var bowerDir = './public/vendor/';
 
@@ -64,6 +65,7 @@ gulp.task('appJS', function () {
 
 gulp.task('appViews', function () {
     gulp.src(viewsPath)
+        .pipe(flatten({ includeParents: [1, 0]}))
         .pipe(gulp.dest('public/views', {overwrite: true}));
 });
 

@@ -5,6 +5,8 @@ app.run(function($rootScope, $state) {
     // such as toState to hook into details about the state as it is changing
     $rootScope.$on('$stateChangeStart', function(event, toState) {
 
+        $rootScope.navCollapsed = true;
+
         // Grab the user from local storage and parse it to an object
         var user = JSON.parse(localStorage.getItem('user'));
 

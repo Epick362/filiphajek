@@ -16,6 +16,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         controller: 'IndexController',
         controllerAs: 'vm'
     })
+    .state('contact', {
+        url: '/contact',
+        parent: 'app',
+        templateUrl: 'views/contact.html',
+    })
     .state('login', {
         url: '/login',
         templateUrl: 'views/login.html',
