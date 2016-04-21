@@ -81,3 +81,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['appJS', 'appViews', 'vendorCSS', 'vendorJS', 'fonts', 'sass', 'watch']);
+gulp.task('dist', ['appJS', 'appViews', 'vendorCSS', 'vendorJS', 'fonts', 'sass']);
