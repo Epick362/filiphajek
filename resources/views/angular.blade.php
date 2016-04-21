@@ -25,47 +25,55 @@
         <base href="/" />
     </head>
     <body ng-app="app" ng-cloak>
-        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-            <button class="navbar-toggler hidden-sm-up" type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
-                &#9776;
-            </button>
+        <nav class="navbar navbar-dark navbar-fixed-top" ng-class="(!$state.is('index') || forceOpaque) ? 'bg-inverse' : 'bg-transparent'">
+            <div class="container">
+                <button class="navbar-toggler hidden-sm-up" type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                    &#9776;
+                </button>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-toggleable-xs" collapse="navCollapsed">
-                <a class="navbar-brand" href="/">
-                    Bootstrap
-                </a>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-toggleable-xs" collapse="navCollapsed">
+                    <a class="navbar-brand" href="/">
+                        Bootstrap
+                        @{{$forceOpaque}} lel
+                    </a>
 
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="item">item</a></li>
-                </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="item">item</a></li>
+                    </ul>
 
-                <ul class="nav navbar-nav pull-xs-right">
-                    <li class="nav-item" ng-if="authenticated">
-                        <a class="nav-link" ui-sref="index">
-                            <i class="fa fa-user"></i> @{{currentUser.name}}
-                        </a>
-                    </li>
-                    <li class="nav-item" ng-if="authenticated">
-                        <logout></logout>
-                    </li>
-                    <li class="nav-item" ng-if="!authenticated">
-                        <a class="nav-link" ui-sref="login">
-                            Log In
-                        </a>
-                    </li>
-                    <li class="nav-item" ng-if="!authenticated">
-                        <a class="nav-link" ui-sref="register">
-                            Sign Up
-                        </a>
-                    </li>
-                </ul>
+                    <ul class="nav navbar-nav pull-xs-right">
+                        <li class="nav-item" ng-if="authenticated">
+                            <a class="nav-link" ui-sref="index">
+                                <i class="fa fa-user"></i> @{{currentUser.name}}
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="authenticated">
+                            <logout></logout>
+                        </li>
+                        <li class="nav-item" ng-if="!authenticated">
+                            <a class="nav-link" ui-sref="login">
+                                Log In
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="!authenticated">
+                            <a class="nav-link" ui-sref="register">
+                                Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
-        <div class="container content">
-            <ui-view></ui-view>
-        </div>
+        <ui-view></ui-view>
+
+        <div class="footer-margin"></div>
+        <footer>
+            <div class="container">
+                Ay lmaoo
+            </div>
+        </footer>
 
         <script type="text/javascript" src="{{ url('build/vendor.min.js') }}"></script>
         <script type="text/javascript" src="{{ url('build/app.min.js') }}"></script>

@@ -1,4 +1,6 @@
 app.run(function($rootScope, $state) {
+    $rootScope.$state = $state;
+
     // $stateChangeStart is fired whenever the state changes. We can use some parameters
     // such as toState to hook into details about the state as it is changing
     $rootScope.$on('$stateChangeStart', function(event, toState) {

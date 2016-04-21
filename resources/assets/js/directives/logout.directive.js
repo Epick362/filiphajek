@@ -12,6 +12,6 @@ app.directive('logout', function() {
         restrict: 'E',
         replace: true,
         controller: controller,
-        template: '<a href="" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</a>'
+        template: '<a href="" class="nav-link" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</a>'
     };
 });

@@ -42,6 +42,7 @@ gulp.task('vendorJS', function () {
             'public/vendor/ngAnimateCss/angular-animate-css.min.js',
             'public/vendor/satellizer/satellizer.min.js',
             'public/vendor/ng-messages/angular-messages.min.js',
+            'public/vendor/tweenlite/TweenLite.min.js',
             'public/vendor/angular-toastr/dist/angular-toastr.min.js',
             'public/vendor/angular-toastr/dist/angular-toastr.tpls.js'],
             {base: 'public/vendor/'})

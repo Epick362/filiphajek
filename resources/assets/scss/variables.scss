@@ -26,7 +26,7 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #373a3c !default;
+$gray-dark:                 darken(#373a3c, 8%) !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
@@ -36,14 +36,14 @@ $brand-primary:             #0275d8 !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
-$brand-danger:              #d9534f !default;
+$brand-danger:              #FF443C !default;
 
 
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               false !default;
+$enable-flex:               true !default;
 $enable-rounded:            true !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
@@ -85,8 +85,8 @@ $border-width:               1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:                    #fff !default;
-$body-color:                 $gray-dark !default;
+$body-bg:                    #f4f4f4;
+$body-color:                 lighten($gray-dark, 8%) !default;
 
 
 // Links
@@ -142,10 +142,11 @@ $grid-gutter-width:          1.875rem !default; // 30px
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:     "Open Sans", Helvetica, Arial, sans-serif !default;
 $font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:           $font-family-sans-serif !default;
+$font-family-bold:           "Oswald", sans-serif !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root:             16px !default;
@@ -155,7 +156,7 @@ $font-size-lg:               1.25rem !default;
 $font-size-sm:               .875rem !default;
 $font-size-xs:               .75rem !default;
 
-$font-size-h1:               2.5rem !default;
+$font-size-h1:               2.3rem !default;
 $font-size-h2:               2rem !default;
 $font-size-h3:               1.75rem !default;
 $font-size-h4:               1.5rem !default;
@@ -217,6 +218,8 @@ $component-active-bg:    $brand-primary !default;
 
 $caret-width:            .3em !default;
 $caret-width-lg:         $caret-width !default;
+
+$footer-height:          100px;
 
 
 // Tables
