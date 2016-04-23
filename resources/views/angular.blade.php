@@ -70,7 +70,7 @@
         <div class="footer-margin"></div>
         <footer>
             <div class="container">
-                &copy; {{ date('Y') }} FilipHajek.com
+                &copy; {{ date('Y') }} Filiphajek.com
 
                 <div class="pull-right">
                     <ul class="list-unstyled list-inline list-social">

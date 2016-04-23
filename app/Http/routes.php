@@ -18,6 +18,8 @@ Route::group(['prefix' => 'api'], function () {
         });
     });
 
+    Route::resource('contact', 'ContactController', ['only' => ['store']]);
+
     Route::post('authenticate', 'AuthenticateController@authenticate');
     Route::post('signup', 'AuthenticateController@signup');
     Route::get('authenticate/user', 'AuthenticateController@getAuthenticatedUser');
