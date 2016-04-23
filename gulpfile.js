@@ -36,6 +36,7 @@ gulp.task('vendorCSS', function () {
 
 gulp.task('vendorJS', function () {
     gulp.src([ 'public/vendor/angular/angular.min.js',
+            'public/vendor/angular-animate/angular-animate.min.js',
             'public/vendor/angular-bootstrap/ui-bootstrap.min.js',
             'public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
             'public/vendor/angular-ui-router/release/angular-ui-router.min.js',

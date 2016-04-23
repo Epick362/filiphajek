@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => 'mg.filiphajek.com',
+        'secret' => 'key-b034e029119a0165b9b2c72867411999',
     ],
 
     'mandrill' => [

@@ -13,12 +13,22 @@
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
         <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#d6a941">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <meta name="theme-color" content="#ffffff">
+
+        <meta property="og:url" content="https://www.filiphajek.com/">
+        <meta property="og:title" content="Filip Hajek | Web developer">
+        <meta property="og:description" content="Freelance web developer">
+        <meta property="og:site_name" content="Filip Hajek">
+        <meta property="og:image" content="https://www.filiphajek.com/apple-touch-icon-180x180.png">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
 
         <link rel="stylesheet" href="{{ url('build/vendor.min.css') }}">
         <link rel="stylesheet" href="{{ url('build/app.css') }}">
@@ -38,9 +48,9 @@
                     </a>
 
                     <ul class="nav navbar-nav pull-xs-right">
-                        <li class="nav-item"><a class="nav-link" href="">Projekty</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">O mne</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link" ui-sref="index">Projekty</a></li>
+                        <li class="nav-item"><a class="nav-link" ui-sref="about">O mne</a></li>
+                        <li class="nav-item"><a class="nav-link" ui-sref="contact">Kontakt</a></li>
 
                         <li class="nav-item" ng-if="authenticated">
                             <a class="nav-link" ui-sref="index">
@@ -55,7 +65,7 @@
             </div>
         </nav>
 
-        <ui-view></ui-view>
+        <div ui-view></div>
 
         <div class="footer-margin"></div>
         <footer>

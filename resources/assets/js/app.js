@@ -5,5 +5,6 @@ var app = angular.module('app', [
     'ui.bootstrap',
     'satellizer',
     'toastr',
-    'ngMessages'
+    'ngMessages',
+    'ngAnimate'
 ]);
