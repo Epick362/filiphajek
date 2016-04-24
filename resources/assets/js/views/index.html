@@ -2,40 +2,19 @@
     <canvas id="canvas-dots" class="canvas-dots"></canvas>
     <div class="hero-overlay">
         <div class="hero-inner">
-            Ahoj, volám sa Filip a vytvorím Vám <span>profesionálne</span> webstránky.<br />
+            {{ 'HERO_1' | translate }} <span>{{ 'HERO_2' | translate }}</span> {{ 'HERO_3' | translate }}<br />
 
-            <a ui-sref="contact" class="btn btn-danger btn-lg call-to-action">Začať projekt</a>
+            <a ui-sref="contact" class="btn btn-danger btn-lg call-to-action">{{ 'CTA' | translate }}</a>
         </div>
     </div>
 </div>
 
-<h1><span>Projekty</span></h1>
+<h1><span>{{ 'PROJECTS' | translate }}</span></h1>
 <div class="container content is-hero projects">
-    <ul class="grid project-preview">
-        <li>
-            <figure>
-                <img src="images/edocu_t.jpg" class="img-fluid" alt="eDocu">
-                <figcaption>
-                    <h3>eDocu</h3>
-                    <span>Front-end + UI Dizajnér</span>
-                    <a class="btn btn-secondary btn-sm" ui-sref="project({id: 'edocu'})">Detaily</a>
-                </figcaption>
-            </figure>
-        </li>
-        <li>
-            <figure>
-                <img src="images/readditing_t.jpg" class="img-fluid" alt="Readditing">
-                <figcaption>
-                    <h3>Readditing</h3>
-                    <span>Osobný projekt</span>
-                    <a class="btn btn-secondary btn-sm" ui-sref="project({id: 'readditing'})">Detaily</a>
-                </figcaption>
-            </figure>
-        </li>
-    </ul>
+    <projects-grid></projects-grid>
 </div>
 
-<h1><span>Kontakt</span></h1>
+<h1><span>{{ 'CONTACT' | translate }}</span></h1>
 <div class="container content is-hero contact">
     <div class="row">
         <div class="col-md-10 col-md-offset-1 col-xs-12">

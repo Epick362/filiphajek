@@ -6,5 +6,6 @@ var app = angular.module('app', [
     'satellizer',
     'toastr',
     'ngMessages',
-    'ngAnimate'
+    'ngAnimate',
+    'pascalprecht.translate'
 ]);

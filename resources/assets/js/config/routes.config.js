@@ -26,10 +26,15 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         parent: 'app',
         templateUrl: 'views/about.html',
     })
+    .state('projects', {
+        url: '/projects',
+        parent: 'app',
+        templateUrl: 'views/projects.html',
+    })
     .state('project', {
         url: '/project?id',
         parent: 'app',
-        templateUrl: 'views/project.html',
+        template: '<project></project>',
     })
     .state('login', {
         url: '/login',

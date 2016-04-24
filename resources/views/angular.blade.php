@@ -22,11 +22,11 @@
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <meta property="og:url" content="https://www.filiphajek.com/">
+        <meta property="og:url" content="https://filiphajek.com/">
         <meta property="og:title" content="Filip Hajek | Web developer">
         <meta property="og:description" content="Freelance web developer">
         <meta property="og:site_name" content="Filip Hajek">
-        <meta property="og:image" content="https://www.filiphajek.com/apple-touch-icon-180x180.png">
+        <meta property="og:image" content="https://filiphajek.com/apple-touch-icon-180x180.png">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="en_US">
 
@@ -48,9 +48,9 @@
                     </a>
 
                     <ul class="nav navbar-nav pull-xs-right">
-                        <li class="nav-item"><a class="nav-link" ui-sref="index">Projekty</a></li>
-                        <li class="nav-item"><a class="nav-link" ui-sref="about">O mne</a></li>
-                        <li class="nav-item"><a class="nav-link" ui-sref="contact">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link" ui-sref="projects">@{{ 'PROJECTS' | translate }}</a></li>
+                        <li class="nav-item"><a class="nav-link" ui-sref="about">@{{ 'ABOUT' | translate }}</a></li>
+                        <li class="nav-item"><a class="nav-link" ui-sref="contact">@{{ 'CONTACT' | translate }}</a></li>
 
                         <li class="nav-item" ng-if="authenticated">
                             <a class="nav-link" ui-sref="index">

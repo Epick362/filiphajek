@@ -1,26 +1,24 @@
 <div class="contact-form">
-    <p>Ste pripravení začať Váš projekt alebo máte nejakú otázku?
-        Porozprávajme sa o Vašom nápade. Rád prichádzam na prvé stretnutie pripravený a preto by som niečo rád vedel čo najviac detailov o vašom projekte vopred.
-        Čím viac informácií mi poskytnete, tým rýchlejsie budem pre Vás vedieť nájsť ideálne riešenie.</p>
+    <p>{{ 'CONTACT_P' | translate }}</p>
 
     <form novalidate ng-submit="vm.submit()" ng-if="!vm.sent" name="contactForm">
         <fieldset class="form-group" form-errors>
-            <label class="form-control-label" for="contactName">Meno *</label>
+            <label class="form-control-label" for="contactName">{{ 'NAME' | translate }} *</label>
             <input type="text" name="contactName" class="form-control" ng-model="vm.contact.name" required>
         </fieldset>
 
         <fieldset class="form-group" form-errors>
-            <label class="form-control-label" for="contactEmail">Email *</label>
+            <label class="form-control-label" for="contactEmail">{{ 'EMAIL' | translate }} *</label>
             <input type="email" name="contactEmail" class="form-control" ng-model="vm.contact.email" required>
         </fieldset>
 
         <fieldset class="form-group" form-errors>
-            <label class="form-control-label" for="contactCompany">Názov spoločnosti</label>
+            <label class="form-control-label" for="contactCompany">{{ 'COMPANY' | translate }}</label>
             <input type="text" name="contactCompany" class="form-control" ng-model="vm.contact.company">
         </fieldset>
 
         <fieldset class="form-group">
-            <label class="form-control-label" for="contactProjectType">Typ projektu</label><br />
+            <label class="form-control-label" for="contactProjectType">{{ 'PROJECT_TYPE' | translate }}</label><br />
             <div class="checkbox-inline-wrapper">
                 <label class="checkbox-inline">
                     <input type="checkbox" ng-model="vm.contact.project.webdesign" value="1"> Web Dizajn
@@ -35,31 +33,31 @@
                     <input type="checkbox" ng-model="vm.contact.project.seo" value="1"> SEO
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="vm.contact.project.other" value="1"> Iné
+                    <input type="checkbox" ng-model="vm.contact.project.other" value="1"> {{ 'OTHER' | translate }}
                 </label>
             </div>
         </fieldset>
 
         <fieldset class="form-group" form-errors>
-            <label class="form-control-label" for="contactBudget">Rozpočet (v €)</label>
+            <label class="form-control-label" for="contactBudget">{{ 'BUDGET' | translate }}</label>
             <input type="number" name="contactBudget" class="form-control" ng-model="vm.contact.budget">
         </fieldset>
 
         <fieldset class="form-group" form-errors>
-            <label class="form-control-label" for="contactMessage">Správa *</label>
+            <label class="form-control-label" for="contactMessage">{{ 'MESSAGE' | translate }} *</label>
             <textarea class="form-control" name="contactMessage" ng-model="vm.contact.message" rows="3" required></textarea>
         </fieldset>
 
         <button type="submit" class="btn btn-primary" ng-disabled="vm.loading || contactForm.$invalid">
-            <i ng-if="vm.loading" class="fa fa-spinner fa-pulse"></i> Odoslať
+            <i ng-if="vm.loading" class="fa fa-spinner fa-pulse"></i> {{ 'SUBMIT' | translate }}
         </button>
     </form>
 
     <div class="alert alert-success" ng-if="vm.sent">
-        Úspešne odoslané.
+        {{ 'FORM_SUCCESS' | translate }}
     </div>
 
     <div class="alert alert-danger" ng-if="vm.error">
-        Chyba pri odosielaní. Kontaktujte ma prosím na flp.hajek@gmail.com
+        {{ 'FORM_ERROR' | translate }}
     </div>
 </div>
