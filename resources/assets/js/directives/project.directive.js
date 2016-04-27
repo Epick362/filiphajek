@@ -1,24 +1,16 @@
 app.directive('project', function() {
-    var controller = ['$stateParams', '$sce', function($stateParams, $sce) {
+    var controller = ['$stateParams', '$sce', '$translate', function($stateParams, $sce, $translate) {
         var vm = this;
 
         vm.project = $stateParams.id;
 
-        switch (vm.project) {
-            case 'edocu':
-                vm.title = 'eDocu';
-                vm.body = '<b>heheh</b>';
+        $translate('PROJECT_DETAIL.' + vm.project + '.TITLE').then(function(title) {
+            vm.title = title;
+        });
 
-                break;
-            case 'readditing':
-                vm.title = 'Readditing';
-                vm.body = '<b>wda</b>';
-                break;
-            default:
-                console.err('No project found');
-        }
-
-        vm.body = $sce.trustAsHtml(vm.body);
+        $translate('PROJECT_DETAIL.' + vm.project + '.BODY').then(function(body) {
+            vm.body = $sce.trustAsHtml(body);
+        });
     }];
 
     return {

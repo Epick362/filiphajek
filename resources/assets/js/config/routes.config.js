@@ -7,7 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
         url: '',
         abstract: true,
-        template: '<div ui-view=""></div>'
+        template: '<div ui-view=""></div>',
     })
     .state('index', {
         url: '/',

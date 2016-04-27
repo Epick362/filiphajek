@@ -1,4 +1,7 @@
 <div class="container content">
-    <h1>{{ vm.title }}</h1>
+    <h1><span>{{ vm.title }}</span></h1>
     <p ng-bind-html="vm.body"></p>
+
+    <h3><span>{{ 'PROJECT_PREVIEW' | translate }}</span></h3>
+    <img ng-src="images/{{ vm.project }}.jpg" alt="{{ vm.project }} screenshot" class="img-fluid">
 </div>

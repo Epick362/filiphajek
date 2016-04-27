@@ -7,5 +7,6 @@ var app = angular.module('app', [
     'toastr',
     'ngMessages',
     'ngAnimate',
-    'pascalprecht.translate'
+    'ngCookies',
+    'pascalprecht.translate',
 ]);

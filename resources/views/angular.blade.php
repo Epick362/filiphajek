@@ -47,9 +47,10 @@
                         Filip Hajek
                     </a>
 
+                    <language-picker></language-picker>
+
                     <ul class="nav navbar-nav pull-xs-right">
                         <li class="nav-item"><a class="nav-link" ui-sref="projects">@{{ 'PROJECTS' | translate }}</a></li>
-                        <li class="nav-item"><a class="nav-link" ui-sref="about">@{{ 'ABOUT' | translate }}</a></li>
                         <li class="nav-item"><a class="nav-link" ui-sref="contact">@{{ 'CONTACT' | translate }}</a></li>
 
                         <li class="nav-item" ng-if="authenticated">

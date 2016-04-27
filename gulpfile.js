@@ -47,6 +47,9 @@ gulp.task('vendorJS', function () {
             'public/vendor/tweenlite/TweenLite.min.js',
             'public/vendor/angular-toastr/dist/angular-toastr.min.js',
             'public/vendor/angular-translate/angular-translate.min.js',
+            'public/vendor/angular-cookies/angular-cookies.min.js',
+            'public/vendor/angular-translate-storage-local/angular-translate-storage-local.min.js',
+            'public/vendor/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js',
             'public/vendor/angular-toastr/dist/angular-toastr.tpls.js'],
             {base: 'public/vendor/'})
         .pipe(concat('vendor.min.js'))
