@@ -190,31 +190,3 @@ footer {
     box-shadow: 0 0 darken($brand-danger, 30%);
     top: 8px;
 }
-
-.project-preview figure img {
-    z-index: 10;
-    transition: transform 0.4s;
-}
-
-.project-preview figure:hover img {
-    transform: translateY(-50px) scale(0.5);
-}
-
-.project-preview figure:hover figcaption {
-    display: block;
-}
-
-.project-preview figcaption {
-    height: 100%;
-    width: 100%;
-}
-
-.project-preview figcaption h3 {
-    margin-top: 40%;
-}
-
-.project-preview figcaption a {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}

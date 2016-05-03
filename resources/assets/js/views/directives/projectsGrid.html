@@ -1,22 +1,18 @@
-<ul class="grid project-preview">
-    <li>
-        <figure>
-            <img src="images/edocu_t.jpg" class="img-fluid" alt="eDocu">
-            <figcaption>
-                <h3>eDocu</h3>
-                <span>{{ 'EDOCU_SPEC' | translate }}</span>
-                <a class="btn btn-secondary btn-sm" ui-sref="project({id: 'edocu'})">{{ 'DETAILS' | translate }}</a>
-            </figcaption>
-        </figure>
-    </li>
-    <li>
-        <figure>
-            <img src="images/readditing_t.jpg" class="img-fluid" alt="Readditing">
-            <figcaption>
-                <h3>Readditing</h3>
-                <span>{{ 'PERSONAL_PROJECT' | translate }}</span>
-                <a class="btn btn-secondary btn-sm" ui-sref="project({id: 'readditing'})">{{ 'DETAILS' | translate }}</a>
-            </figcaption>
-        </figure>
-    </li>
-</ul>
+<div class="grid clearfix">
+    <figure class="effect-image">
+        <img src="images/edocu_t.jpg" class="img-fluid" alt="eDocu">
+        <figcaption>
+            <h2><span>eDocu</span></h2>
+            <p>{{ 'EDOCU_SPEC' | translate }}</p>
+            <a class="btn btn-secondary btn-sm" ui-sref="project({id: 'edocu'})">{{ 'DETAILS' | translate }}</a>
+        </figcaption>
+    </figure>
+    <figure class="effect-image">
+        <img src="images/readditing_t.jpg" class="img-fluid" alt="Readditing">
+        <figcaption>
+            <h2><span>Readditing</span></h2>
+            <p>{{ 'PERSONAL_PROJECT' | translate }}</p>
+            <a class="btn btn-secondary btn-sm" ui-sref="project({id: 'readditing'})">{{ 'DETAILS' | translate }}</a>
+        </figcaption>
+    </figure>
+</div>
