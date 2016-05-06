@@ -32,7 +32,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         templateUrl: 'views/projects.html',
     })
     .state('project', {
-        url: '/project?id',
+        url: '/project/:id',
         parent: 'app',
         template: '<project></project>',
     })
