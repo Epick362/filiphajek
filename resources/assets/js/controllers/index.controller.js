@@ -192,7 +192,7 @@ app.controller('IndexController', function($rootScope) {
             var cotentStartPx = contentStart[0].getBoundingClientRect().top;
         }
 
-        if(document.body.scrollTop > cotentStartPx) {
+        if(document.body.scrollTop > cotentStartPx - 100) {
             $rootScope.$apply(function() {
                 $rootScope.forceOpaque = true;
             });

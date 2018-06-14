@@ -47,9 +47,7 @@
                         Filip Hajek
                     </a>
 
-                    <language-picker></language-picker>
-
-                    <ul class="nav navbar-nav pull-xs-right">
+                    <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link" ui-sref="projects">@{{ 'PROJECTS' | translate }}</a></li>
                         <li class="nav-item"><a class="nav-link" ui-sref="contact">@{{ 'CONTACT' | translate }}</a></li>
 
@@ -62,6 +60,8 @@
                             <logout></logout>
                         </li>
                     </ul>
+
+                    <language-picker></language-picker>
                 </div>
             </div>
         </nav>

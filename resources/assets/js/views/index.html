@@ -2,9 +2,18 @@
     <canvas id="canvas-dots" class="canvas-dots"></canvas>
     <div class="hero-overlay">
         <div class="hero-inner">
-            {{ 'HERO_1' | translate }} <span>{{ 'HERO_2' | translate }}</span> {{ 'HERO_3' | translate }}<br />
+            <!-- {{ 'HERO_1' | translate }} <span>{{ 'HERO_2' | translate }}</span> {{ 'HERO_3' | translate }}<br /> -->
 
-            <a ui-sref="contact" class="btn btn-danger btn-lg call-to-action">{{ 'CTA' | translate }}</a>
+            <div class="container">
+                <img class="hero-me" src="images/me.jpg" alt="Hey, this is me">
+                <div class="hero-bio">
+                    <h1>Filip Hájek</h1>
+                    <h2>Webdesigner | Front-end programmer</h2>
+                    <hr>
+                    <p>I specialize in making slick & usable websites and apps that are tailored to your business.</p>
+                    <a ui-sref="contact" class="btn btn-danger btn-lg call-to-action">{{ 'CTA' | translate }}</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

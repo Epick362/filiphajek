@@ -13,7 +13,10 @@ app.directive('languagePicker', function() {
             }
         ];
 
+        vm.langKey = $translate.use();
+
         vm.changeLanguage = function (langKey) {
+            vm.langKey = langKey;
             $translate.use(langKey);
         };
     }];

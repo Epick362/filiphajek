@@ -1,3 +1,8 @@
-<ul class="nav navbar-nav">
-    <li ng-repeat="lang in vm.languages" class="nav-item"><a class="nav-link" href="" ng-click="vm.changeLanguage(lang.key)">{{ lang.name }}</a></li>
+<ul class="nav navbar-nav pull-xs-right">
+    <li ng-repeat="lang in vm.languages" ng-show="lang.key !== vm.langKey" class="nav-item">
+        <a class="nav-link" href="" ng-click="vm.changeLanguage(lang.key)">
+            <img class="language-icon" ng-src="images/languages/{{lang.key}}.png" alt="{{lang.name}}">
+            {{ lang.name }}
+        </a>
+    </li>
 </ul>
