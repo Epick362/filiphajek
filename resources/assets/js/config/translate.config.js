@@ -1,8 +1,8 @@
 app.config(['$translateProvider', function ($translateProvider) {
     $translateProvider.translations('en', {
-        'HERO_1': 'Hi, my name is Filip and I make',
-        'HERO_2': 'professional',
-        'HERO_3': 'websites.',
+        'HERO_NAME': 'Filip Hájek',
+        'HERO_DESC': 'Webdesigner | Front-end programmer',
+        'HERO_BIO': 'I enjoy creating visually pleasing & intuitive websites and apps that are tailored to your business.',
         'CTA': 'Start now',
         'PROJECTS': 'Projects',
         'CONTACT': 'Contact',
@@ -35,9 +35,9 @@ app.config(['$translateProvider', function ($translateProvider) {
     });
 
     $translateProvider.translations('sk', {
-        'HERO_1': 'Ahoj, volám sa Filip a vytvorím Vám',
-        'HERO_2': 'profesionálne',
-        'HERO_3': 'webstránky.',
+        'HERO_NAME': 'Filip Hájek',
+        'HERO_DESC': 'Webdizajnér | Front-end programátor',
+        'HERO_BIO': 'Rád vytváram zaujímavé a intuitívne webstránky a aplikácie ušité práve pre Váš business.',
         'CTA': 'Začať projekt',
         'PROJECTS': 'Projekty',
         'CONTACT': 'Kontakt',

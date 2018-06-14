@@ -44,7 +44,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-toggleable-xs" collapse="navCollapsed">
                     <a class="navbar-brand" href="/">
-                        Filip Hajek
+                        FH
                     </a>
 
                     <ul class="nav navbar-nav">
@@ -71,7 +71,7 @@
         <div class="footer-margin"></div>
         <footer>
             <div class="container">
-                &copy; {{ date('Y') }} Filiphajek.com
+                &copy; {{ date('Y') }}
 
                 <div class="pull-right">
                     <ul class="list-unstyled list-inline list-social">
@@ -84,6 +84,9 @@
 
         <script type="text/javascript" src="{{ url('build/vendor.min.js') }}"></script>
         <script type="text/javascript" src="{{ url('build/app.min.js') }}"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+        </script>
 
         @if (app('env') == 'local')
 <script id="__bs_script__">//<![CDATA[
